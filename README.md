@@ -7,7 +7,7 @@ wsl
 sudo apt-get update
 sudo apt-get install flex bison gcc
 
-2.
+2. Run on a linux system
 bison -d boolcalc.y  
 flex boolcalc.l 
 gcc -lm boolcalc.tab.c lex.yy.c -o boolcalc 
