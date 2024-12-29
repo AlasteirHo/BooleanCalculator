@@ -1,4 +1,4 @@
-Boolean Calculator
+# Boolean Calculator
 A simple boolean calculator which features a grammar control.
 Installation & Usage
 To run it on WSL first install WSL using Part 1, then run Part 2. For Linux-based systems, you can skip to Part 2.
