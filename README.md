@@ -1,14 +1,23 @@
-A simple boolean calculator which features a grammar control
-
-To run it on WSL first install WSL using part 1 then run part 2, for Linux based systems you can skip to part 2.
-1. To run it on windows WSL:
-Install WSL:
+Boolean Calculator
+A simple boolean calculator which features a grammar control.
+Installation & Usage
+To run it on WSL first install WSL using Part 1, then run Part 2. For Linux-based systems, you can skip to Part 2.
+Part 1: Setting up WSL (Windows only)
+bashCopy# Install WSL
 wsl
+
+# Update package list and install required packages
 sudo apt-get update
 sudo apt-get install flex bison gcc
+Part 2: Building and Running the Calculator
+bashCopy# Generate parser
+bison -d boolcalc.y
 
-2. Run on a linux system
-bison -d boolcalc.y  
-flex boolcalc.l 
-gcc -lm boolcalc.tab.c lex.yy.c -o boolcalc 
+# Generate lexer
+flex boolcalc.l
+
+# Compile
+gcc -lm boolcalc.tab.c lex.yy.c -o boolcalc
+
+# Run the calculator
 ./boolcalc
